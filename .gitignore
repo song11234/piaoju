@@ -1,0 +1,7 @@
+node_modules/
+.npm-cache/
+data/
+uploads/
+server.log
+server-error.log
+fapiao-deploy.tar.gz

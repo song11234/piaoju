@@ -1,0 +1,20 @@
+[Unit]
+Description=Fapiao reimbursement system
+After=network.target
+
+[Service]
+Type=simple
+User=fapiao
+WorkingDirectory=/opt/fapiao
+Environment=NODE_ENV=production
+Environment=HOST=127.0.0.1
+Environment=PORT=3000
+Environment=OPENAI_BASE_URL=https://ergouzi.life/v1
+Environment=OPENAI_REVIEW_MODEL=gpt-5.4-mini
+EnvironmentFile=-/etc/fapiao.env
+ExecStart=/usr/local/bin/node server.js
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
