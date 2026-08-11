@@ -5,3 +5,4 @@ uploads/
 server.log
 server-error.log
 fapiao-deploy.tar.gz
+release/*/
